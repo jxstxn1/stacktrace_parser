@@ -1,13 +1,29 @@
 import 'package:flutter/cupertino.dart';
+
+import 'package:stacktrace_parser/data/firestore_handler.dart';
 import 'package:stacktrace_parser/data/stacktrace_parser.dart';
 
 class StackTraceHandler extends ChangeNotifier {
-  ParseResult? _result;
+  StackTraceHandler({
+    required this.firestore,
+    this.result,
+  });
+  FirestoreHandler firestore;
 
-  ParseResult? get result => _result;
+  ParseResult? result;
 
   void parseStacktrace(String stacktrace) {
-    _result = parseStackTrace(stacktrace);
+    result = parseStackTrace(stacktrace);
     notifyListeners();
+  }
+
+  StackTraceHandler copyWith({
+    FirestoreHandler? firestore,
+    ParseResult? result,
+  }) {
+    return StackTraceHandler(
+      firestore: firestore ?? this.firestore,
+      result: result ?? this.result,
+    );
   }
 }

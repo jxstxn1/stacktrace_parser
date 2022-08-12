@@ -50,7 +50,7 @@ ParseResult parseStackTrace(String stackTrace) {
       .filterUnlessItCausesEmpty((it) => !it.text.startsWith('packages/flutter/src/'))
       .toList();
 
-  return ParseResult(relevantLines: filteredLines);
+  return ParseResult(relevantLines: filteredLines, rawStackTrace: stackTrace);
 }
 
 extension Remove<T> on Iterable<T> {
@@ -64,9 +64,13 @@ extension Remove<T> on Iterable<T> {
 }
 
 class ParseResult {
-  const ParseResult({required this.relevantLines});
+  const ParseResult({
+    required this.relevantLines,
+    required this.rawStackTrace,
+  });
 
   final List<StackTraceLine> relevantLines;
+  final String rawStackTrace;
 }
 
 class StackTraceLine {
