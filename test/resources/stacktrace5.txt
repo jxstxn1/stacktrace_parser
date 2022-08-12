@@ -1,0 +1,33 @@
+flutter: ══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+flutter: The following CognitoClientException was thrown building
+flutter: _InheritedProviderScope<NavigationPresenter?>(dirty, dependencies:
+flutter: [_InheritedProviderScope<AsyncValue<UserModel?>?>], value: Instance of ‘NavigationPresenter’,
+flutter: listening to value):
+flutter: CognitoClientException{statusCode: 400, code: UserNotFoundException, name: UserNotFoundException,
+flutter: message: User does not exist.}
+flutter:
+flutter: The relevant error-causing widget was:
+flutter:   ChangeNotifierProxyProvider<AsyncValue<UserModel?>, NavigationPresenter>
+flutter:   ChangeNotifierProxyProvider:file:///Users/stephanr/projects/treeapp/packages/tree/lib/src/tree_app.dart:74:19
+flutter:
+flutter: When the exception was thrown, this was the stack:
+flutter: #0      AsyncValueX.value.<anonymous closure> (package:riverpod/src/common.dart:206:21)
+flutter: #1      AsyncError._map (package:riverpod/src/common.dart:391:17)
+flutter: #2      AsyncValueX.value (package:riverpod/src/common.dart:203:12)
+flutter: #3      _TreeAppState.build.<anonymous closure>.<anonymous closure> (package:tree/src/tree_app.dart:83:48)
+flutter: #4      new ListenableProxyProvider.<anonymous closure> (package:provider/src/listenable_provider.dart:122:48)
+flutter: #5      _CreateInheritedProviderState.build (package:provider/src/inherited_provider.dart:852:34)
+flutter: #6      _InheritedProviderScopeElement.build (package:provider/src/inherited_provider.dart:546:20)
+flutter: #7      ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4861:15)
+flutter: #8      Element.rebuild (package:flutter/src/widgets/framework.dart:4587:5)
+flutter: #9      BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2667:19)
+flutter: #10     WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:882:21)
+flutter: #11     RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:378:5)
+flutter: #12     SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1172:15)
+flutter: #13     SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1101:9)
+flutter: #14     SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:1012:5)
+flutter: #15     _invoke (dart:ui/hooks.dart:148:13)
+flutter: #16     PlatformDispatcher._drawFrame (dart:ui/platform_dispatcher.dart:318:5)
+flutter: #17     _drawFrame (dart:ui/hooks.dart:115:31)
+flutter:
+flutter: ════════════════════════════════════════════════════════════════════════════════════════════════════

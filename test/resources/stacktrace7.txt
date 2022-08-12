@@ -1,0 +1,113 @@
+00:12 +0: Counter increments smoke test
+══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+The following message was thrown building MyHomePage(dirty, state: _MyHomePageState#4c0f7):
+hello
+
+The relevant error-causing widget was:
+  MyHomePage file:///Users/pedromassango/Desktop/appx/lib/main.dart:29:13
+
+When the exception was thrown, this was the stack:
+#0      _MyHomePageState.build (package:appx/main.dart:68:5)
+#1      StatefulElement.build (package:flutter/src/widgets/framework.dart:4744:28)
+#2      ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4627:15)
+#3      StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:4800:11)
+#4      Element.rebuild (package:flutter/src/widgets/framework.dart:4343:5)
+#5      ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4606:5)
+#6      StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4791:11)
+#7      ComponentElement.mount (package:flutter/src/widgets/framework.dart:4601:5)
+...     Normal element mounting (132 frames)
+#139    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3569:14)
+#140    MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:6236:32)
+...     Normal element mounting (273 frames)
+#413    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3569:14)
+#414    Element.updateChild (package:flutter/src/widgets/framework.dart:3324:20)
+#415    RenderObjectToWidgetElement._rebuild (package:flutter/src/widgets/binding.dart:1252:16)
+#416    RenderObjectToWidgetElement.update (package:flutter/src/widgets/binding.dart:1230:5)
+#417    RenderObjectToWidgetElement.performRebuild (package:flutter/src/widgets/binding.dart:1244:7)
+#418    Element.rebuild (package:flutter/src/widgets/framework.dart:4343:5)
+#419    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2730:33)
+#420    AutomatedTestWidgetsFlutterBinding.drawFrame (package:flutter_test/src/binding.dart:1088:18)
+#421    RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:302:5)
+#422    SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1117:15)
+#423    SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1055:9)
+#424    AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:961:9)
+#427    TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:72:41)
+#428    AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:948:27)
+#429    WidgetTester.pumpWidget.<anonymous closure> (package:flutter_test/src/widget_tester.dart:524:22)
+#432    TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:72:41)
+#433    WidgetTester.pumpWidget (package:flutter_test/src/widget_tester.dart:521:27)
+#434    main.<anonymous closure> (file:///Users/pedromassango/Desktop/appx/test/widget_test.dart:16:18)
+#435    main.<anonymous closure> (file:///Users/pedromassango/Desktop/appx/test/widget_test.dart:14:48)
+#436    testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:146:29)
+#447    FakeAsync.flushMicrotasks (package:fake_async/fake_async.dart:193:32)
+#448    AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1189:17)
+#449    AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1177:35)
+(elided 29 frames from dart:async and package:stack_trace)
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure object was thrown running a test:
+  Expected: exactly one matching node in the widget tree
+  Actual: _TextFinder:<zero widgets with text "0" (ignoring offstage widgets)>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///Users/pedromassango/Desktop/appx/test/widget_test.dart:19:5)
+<asynchronous suspension>
+#5      main.<anonymous closure> (file:///Users/pedromassango/Desktop/appx/test/widget_test.dart)
+#6      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:146:29)
+<asynchronous suspension>
+#7      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart)
+#8      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:784:19)
+<asynchronous suspension>
+#11     TestWidgetsFlutterBinding._runTest (package:flutter_test/src/binding.dart:764:14)
+#12     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:1173:24)
+#13     FakeAsync.run.<anonymous closure>.<anonymous closure> (package:fake_async/fake_async.dart:178:54)
+#18     withClock (package:clock/src/default.dart:48:10)
+#19     FakeAsync.run.<anonymous closure> (package:fake_async/fake_async.dart:178:22)
+#24     FakeAsync.run (package:fake_async/fake_async.dart:178:7)
+#25     AutomatedTestWidgetsFlutterBinding.runTest (package:flutter_test/src/binding.dart:1170:15)
+#26     testWidgets.<anonymous closure> (package:flutter_test/src/widget_tester.dart:138:24)
+#27     Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:175:19)
+<asynchronous suspension>
+#28     Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart)
+#33     Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:173:13)
+#34     Invoker.waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:231:15)
+#39     Invoker.waitForOutstandingCallbacks (package:test_api/src/backend/invoker.dart:228:5)
+#40     Invoker._onRun.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/invoker.dart:383:17)
+<asynchronous suspension>
+#41     Invoker._onRun.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/invoker.dart)
+#46     Invoker._onRun.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/invoker.dart:370:9)
+#47     Invoker._guardIfGuarded (package:test_api/src/backend/invoker.dart:415:15)
+#48     Invoker._onRun.<anonymous closure> (package:test_api/src/backend/invoker.dart:369:7)
+#55     Invoker._onRun (package:test_api/src/backend/invoker.dart:368:11)
+#56     LiveTestController.run (package:test_api/src/backend/live_test_controller.dart:153:11)
+#57     RemoteListener._runLiveTest.<anonymous closure> (package:test_api/src/remote_listener.dart:256:16)
+#62     RemoteListener._runLiveTest (package:test_api/src/remote_listener.dart:255:5)
+#63     RemoteListener._serializeTest.<anonymous closure> (package:test_api/src/remote_listener.dart:208:7)
+#81     _GuaranteeSink.add (package:stream_channel/src/guarantee_channel.dart:125:12)
+#82     new _MultiChannel.<anonymous closure> (package:stream_channel/src/multi_channel.dart:159:31)
+#86     CastStreamSubscription._onData (dart:_internal/async_cast.dart:85:11)
+#120    new _WebSocketImpl._fromSocket.<anonymous closure> (dart:_http/websocket_impl.dart:1145:21)
+#128    _WebSocketProtocolTransformer._messageFrameEnd (dart:_http/websocket_impl.dart:338:23)
+#129    _WebSocketProtocolTransformer.add (dart:_http/websocket_impl.dart:232:46)
+#139    _Socket._onData (dart:io-patch/socket_patch.dart:2044:41)
+#148    new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:1580:33)
+#149    _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:1076:14)
+(elided 111 frames from dart:async and package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///Users/pedromassango/Desktop/appx/test/widget_test.dart line 19
+The test description was:
+  Counter increments smoke test
+════════════════════════════════════════════════════════════════════════════════════════════════════
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following message was thrown:
+Multiple exceptions (2) were detected during the running of the current test, and at least one was
+unexpected.
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:12 +0 -1: Counter increments smoke test [E]
+  Test failed. See exception logs above.
+  The test description was: Counter increments smoke test
+
+00:12 +0 -1: Some tests failed.

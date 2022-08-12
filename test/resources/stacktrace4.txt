@@ -1,0 +1,32 @@
+══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+The following FileSystemException was thrown building Builder:
+Directory listing failed, path = '/sdcard/Android/data' (OS Error: Permission denied, errno = 13)
+
+The relevant error-causing widget was:
+  MaterialApp MaterialApp:file:///C:/dev/flutter/practice/bug/lib/main.dart:13:12
+
+When the exception was thrown, this was the stack:
+#0      _Directory._fillWithDirectoryListing (dart:io-patch/directory_patch.dart:42:24)
+#1      _Directory.listSync (dart:io/directory_impl.dart:243:5)
+#2      _HomePageState.initState (package:bug/main.dart:34:20)
+#3      StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4942:57)
+#4      ComponentElement.mount (package:flutter/src/widgets/framework.dart:4781:5)
+...     Normal element mounting (275 frames)
+#279    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3817:16)
+#280    MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:6350:36)
+#281    MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:6362:32)
+...     Normal element mounting (377 frames)
+#658    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3817:16)
+#659    Element.updateChild (package:flutter/src/widgets/framework.dart:3551:18)
+#660    RenderObjectToWidgetElement._rebuild (package:flutter/src/widgets/binding.dart:1202:16)
+#661    RenderObjectToWidgetElement.mount (package:flutter/src/widgets/binding.dart:1171:5)
+#662    RenderObjectToWidgetAdapter.attachToRenderTree.<anonymous closure> (package:flutter/src/widgets/binding.dart:1119:18)
+#663    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2597:19)
+#664    RenderObjectToWidgetAdapter.attachToRenderTree (package:flutter/src/widgets/binding.dart:1118:13)
+#665    WidgetsBinding.attachRootWidget (package:flutter/src/widgets/binding.dart:953:7)
+#666    WidgetsBinding.scheduleAttachRootWidget.<anonymous closure> (package:flutter/src/widgets/binding.dart:933:7)
+(elided 11 frames from class _RawReceivePortImpl, class _Timer, dart:async, and dart:async-patch)
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+E/LB      (19849): fail to open file: No such file or directory
+I/com.example.bu(19849): ProcessProfilingInfo new_methods=968 is saved saved_to_disk=1 resolve_classes_delay=8000

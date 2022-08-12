@@ -1,0 +1,127 @@
+The following NoSuchMethodError was thrown building GoogleMap(dirty, state: _GoogleMapState#7176d):
+'[]'
+Dynamic call of null.
+Receiver: null
+Arguments: ["core"]
+
+The relevant error-causing widget was:
+  ArcgisMap
+  ArcgisMap:file:///Users/sandybaufrau/Projects/Flutter/Telekom/lib/presentation/shared_widgets/map.dart:65:43
+
+When the exception was thrown, this was the stack:
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/errors.dart 266:49      throw_
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/operations.dart 735:3   defaultNoSuchMethod
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/operations.dart 729:56  noSuchMethod
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/operations.dart 280:9   _checkAndCall
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/operations.dart 398:10  callMethod
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/operations.dart 402:5   dsend
+packages/google_map_web/src/arcgis_map_web.dart 177:20                            buildView
+packages/google_map/src/arcgis_map.dart 110:39                                    build
+packages/flutter/src/widgets/framework.dart 4975:27                               build
+packages/flutter/src/widgets/framework.dart 4861:15                               performRebuild
+packages/flutter/src/widgets/framework.dart 5033:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4587:5                                rebuild
+packages/flutter/src/widgets/framework.dart 4842:5                                [_firstBuild]
+packages/flutter/src/widgets/framework.dart 5024:11                               [_firstBuild]
+packages/flutter/src/widgets/framework.dart 4836:5                                mount
+packages/flutter/src/widgets/framework.dart 3850:15                               inflateWidget
+packages/flutter/src/widgets/framework.dart 3579:18                               updateChild
+packages/flutter/src/widgets/framework.dart 4887:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5033:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4587:5                                rebuild
+packages/flutter/src/widgets/framework.dart 4842:5                                [_firstBuild]
+packages/flutter/src/widgets/framework.dart 5024:11                               [_firstBuild]
+packages/flutter/src/widgets/framework.dart 4836:5                                mount
+packages/flutter/src/widgets/framework.dart 3850:15                               inflateWidget
+packages/flutter/src/widgets/framework.dart 3579:18                               updateChild
+packages/flutter/src/widgets/framework.dart 4887:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5033:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4587:5                                rebuild
+packages/flutter/src/widgets/framework.dart 4842:5                                [_firstBuild]
+packages/flutter/src/widgets/framework.dart 5024:11                               [_firstBuild]
+packages/flutter/src/widgets/framework.dart 4836:5                                mount
+packages/flutter/src/widgets/framework.dart 3850:15                               inflateWidget
+packages/flutter/src/widgets/framework.dart 6418:36                               inflateWidget
+packages/flutter/src/widgets/framework.dart 6430:32                               mount
+packages/flutter/src/widgets/framework.dart 3850:15                               inflateWidget
+packages/flutter/src/widgets/framework.dart 3579:18                               updateChild
+packages/flutter/src/widgets/framework.dart 4887:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5033:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4587:5                                rebuild
+packages/flutter/src/widgets/framework.dart 4842:5                                [_firstBuild]
+packages/flutter/src/widgets/framework.dart 5024:11                               [_firstBuild]
+packages/flutter/src/widgets/framework.dart 4836:5                                mount
+packages/flutter/src/widgets/framework.dart 3850:15                               inflateWidget
+packages/flutter/src/widgets/framework.dart 3579:18                               updateChild
+packages/flutter/src/widgets/layout_builder.dart 135:18                           layoutCallback
+packages/flutter/src/widgets/framework.dart 2605:19                               buildScope
+packages/flutter/src/widgets/layout_builder.dart 153:5                            [_layout]
+packages/flutter/src/rendering/object.dart 2165:59                                <fn>
+packages/flutter/src/rendering/object.dart 1036:15                                [_enableMutationsToDirtySubtrees]
+packages/flutter/src/rendering/object.dart 2165:7                                 invokeLayoutCallback
+packages/flutter/src/widgets/layout_builder.dart 228:7                            rebuildIfNecessary
+packages/flutter/src/widgets/layout_builder.dart 316:5                            performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 294:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/custom_layout.dart 171:10                          layoutChild
+packages/flutter/src/material/scaffold.dart 1022:7                                performLayout
+packages/flutter/src/rendering/custom_layout.dart 240:7                           [_callPerformLayout]
+packages/flutter/src/rendering/custom_layout.dart 410:14                          performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/proxy_box.dart 1469:11                             performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/layout_helper.dart 56:10                           layoutChild
+packages/flutter/src/rendering/stack.dart 564:43                                  [_computeSize]
+packages/flutter/src/rendering/stack.dart 591:12                                  performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/proxy_box.dart 3729:13                             performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/widgets/overlay.dart 804:14                                  performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout
+packages/flutter/src/rendering/object.dart 2054:7                                 layout
+packages/flutter/src/rendering/box.dart 2418:11                                   layout
+packages/flutter/src/rendering/proxy_box.dart 122:7                               performLayout

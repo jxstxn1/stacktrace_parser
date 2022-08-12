@@ -1,0 +1,25 @@
+flutter: ══╡ EXCEPTION CAUGHT BY RENDERING LIBRARY ╞═════════════════════════════════════════════════════════
+flutter: The following assertion was thrown during paint():
+flutter: 'dart:ui/painting.dart': Failed assertion: line 1147: '<optimized out>': is not true.
+flutter:
+flutter: The relevant error-causing widget was:
+flutter:   CustomPaint file:///home/ianh/dev/house-of-rooves/laundry_room_console/lib/main.dart:552:12
+flutter:
+flutter: When the exception was thrown, this was the stack:
+flutter: #2      Paint.color= (dart:ui/painting.dart:1147:12)
+flutter: #3      WasherPainter.paint (package:laundry_room_console/main.dart:636:11)
+flutter: #4      RenderCustomPaint._paintWithPainter (package:flutter/src/rendering/custom_paint.dart:531:13)
+flutter: #5      RenderCustomPaint.paint (package:flutter/src/rendering/custom_paint.dart:572:7)
+flutter: #6      RenderObject._paintWithContext (package:flutter/src/rendering/object.dart:2311:7)
+flutter: #7      PaintingContext.paintChild (package:flutter/src/rendering/object.dart:189:13)
+flutter: #8      RenderShiftedBox.paint (package:flutter/src/rendering/shifted_box.dart:70:15)
+flutter: #9      RenderObject._paintWithContext (package:flutter/src/rendering/object.dart:2311:7)
+flutter: #10     PaintingContext.paintChild (package:flutter/src/rendering/object.dart:189:13)
+flutter: #11     RenderProxyBoxMixin.paint (package:flutter/src/rendering/proxy_box.dart:131:15)
+flutter: #12     RenderObject._paintWithContext (package:flutter/src/rendering/object.dart:2311:7)
+flutter: #13     PaintingContext.paintChild (package:flutter/src/rendering/object.dart:189:13)
+flutter: #14     RenderProxyBoxMixin.paint (package:flutter/src/rendering/proxy_box.dart:131:15)
+flutter: #15     RenderObject._paintWithContext (package:flutter/src/rendering/object.dart:2311:7)
+flutter: #16     PaintingContext.paintChild (package:flutter/src/rendering/object.dart:189:13)
+flutter: #17     RenderProxyBoxMixin.paint (package:flutter/src/rendering/proxy_box.dart:131:15)
+...

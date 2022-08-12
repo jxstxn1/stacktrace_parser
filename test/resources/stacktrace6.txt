@@ -1,0 +1,207 @@
+finding [<'0'>]
+finding [<'1'>]
+finding [<'2'>]
+finding [<'3'>]
+══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+The following assertion was thrown building
+RawGestureDetector-[LabeledGlobalKey<RawGestureDetectorState>#f074f](state:
+RawGestureDetectorState#7bcf6(gestures: [vertical drag], behavior: opaque)):
+Assertion failed:
+file:///Users/huynq/Documents/GitHub/flutter_master/packages/flutter/lib/src/rendering/sliver_multi_box_adaptor.dart:261:16
+child == null || indexOf(child) > index
+is not true
+
+The relevant error-causing widget was:
+  CustomScrollView
+  CustomScrollView:file:///Users/huynq/Documents/NEVERCODE.IO/RepoduceProjects/reproduce_issues/lib/sliver_107123.dart:42:20
+
+When the exception was thrown, this was the stack:
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/errors.dart 266:49      throw_
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/errors.dart 29:3        assertFailed
+packages/flutter/src/rendering/sliver_multi_box_adaptor.dart 261:55               [_debugVerifyChildOrder]
+packages/flutter/src/rendering/sliver_multi_box_adaptor.dart 235:39               <fn>
+packages/flutter/src/rendering/sliver_multi_box_adaptor.dart 236:67               set debugChildIntegrityEnabled
+packages/flutter/src/widgets/sliver.dart 1371:20                                  performRebuild
+packages/flutter/src/widgets/sliver.dart 1282:7                                   update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 5891:32                               updateChildren
+packages/flutter/src/widgets/framework.dart 6447:17                               update
+packages/flutter/src/widgets/viewport.dart 237:11                                 update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5069:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5069:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5069:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 4943:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5069:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 4943:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 5891:32                               updateChildren
+packages/flutter/src/widgets/framework.dart 6447:17                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 4943:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 4943:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 5891:32                               updateChildren
+packages/flutter/src/widgets/framework.dart 6447:17                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5069:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5069:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5069:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 6294:14                               update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5069:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5069:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5069:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5215:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 5069:5                                update
+packages/flutter/src/widgets/framework.dart 3557:14                               updateChild
+packages/flutter/src/widgets/framework.dart 4891:16                               performRebuild
+packages/flutter/src/widgets/framework.dart 5037:11                               performRebuild
+packages/flutter/src/widgets/framework.dart 4591:5                                rebuild
+packages/flutter/src/widgets/framework.dart 2667:18                               buildScope
+packages/flutter/src/widgets/binding.dart 882:9                                   drawFrame
+packages/flutter/src/rendering/binding.dart 378:5                                 [_handlePersistentFrameCallback]
+packages/flutter/src/scheduler/binding.dart 1175:15                               [_invokeFrameCallback]
+packages/flutter/src/scheduler/binding.dart 1104:9                                handleDrawFrame
+packages/flutter/src/scheduler/binding.dart 1015:5                                [_handleDrawFrame]
+lib/_engine/engine/platform_dispatcher.dart 1103:13                               invoke
+lib/_engine/engine/platform_dispatcher.dart 159:5                                 invokeOnDrawFrame
+lib/_engine/engine/initialization.dart 195:45                                     <fn>
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/operations.dart 334:14  _checkAndCall
+dart-sdk/lib/_internal/js_dev_runtime/private/ddc_runtime/operations.dart 339:39  dcall
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
