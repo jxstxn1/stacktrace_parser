@@ -47,6 +47,12 @@ class _ShareDialogState extends State<ShareDialog> {
                         _passwordController.value.text,
                       ),
                     );
+                context.read<GlobalKey<ScaffoldMessengerState>>().currentState?.showSnackBar(
+                      const SnackBar(
+                        content: Text('Stacktrace copied to clipboard'),
+                        backgroundColor: Colors.green,
+                      ),
+                    );
                 Navigator.of(context).pop();
               },
               child: const Text('Share'),

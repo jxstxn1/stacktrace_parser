@@ -15,6 +15,9 @@ Future<void> main() async {
   runApp(
     MultiProvider(
       providers: [
+        Provider<GlobalKey<ScaffoldMessengerState>>(
+          create: (_) => GlobalKey(debugLabel: 'ScafoldMessengerKey'),
+        ),
         Provider<Database>(
           create: (_) => FirestoreHandler(),
         ),

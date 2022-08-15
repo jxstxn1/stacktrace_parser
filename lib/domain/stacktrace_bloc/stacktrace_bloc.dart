@@ -111,11 +111,11 @@ class StacktraceBloc extends Bloc<StacktraceEvent, StacktraceState> {
       if (event.password != null && event.password!.isNotEmpty) {
         final ParseResult encryptedResult = await crypto.encryptParseResult(_result!, event.password!);
         id = await database.addStackTrace(result: encryptedResult, isEncrypted: true);
-        Clipboard.setData(ClipboardData(text: '/?id=$id'));
+        Clipboard.setData(ClipboardData(text: 'https://stacktrace-parser.web.app/?id=$id'));
         emit(state.copyWith(id: id));
       } else {
         id = await database.addStackTrace(result: _result);
-        Clipboard.setData(ClipboardData(text: '/?id=$id'));
+        Clipboard.setData(ClipboardData(text: 'https://stacktrace-parser.web.app/?id=$id'));
         emit(state.copyWith(id: id));
       }
     });
