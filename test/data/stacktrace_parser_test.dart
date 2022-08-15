@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:stacktrace_parser/data/stacktrace_parser.dart';
+import 'package:stacktrace_parser/data/stacktace/stacktrace_parser.dart';
 
 void main() {
   test('stacktrace1 should highlight line 18+19', () {

@@ -1,4 +1,5 @@
 import 'package:dartx/dartx.dart';
+import 'package:stacktrace_parser/domain/stacktrace_models.dart';
 
 ParseResult parseStackTrace(String stackTrace) {
   final lines = stackTrace.split('\n');
@@ -61,27 +62,4 @@ extension Remove<T> on Iterable<T> {
     }
     return filtered;
   }
-}
-
-class ParseResult {
-  const ParseResult({
-    required this.relevantLines,
-    required this.rawStackTrace,
-  });
-
-  final List<StackTraceLine> relevantLines;
-  final String rawStackTrace;
-}
-
-class StackTraceLine {
-  const StackTraceLine({
-    required this.lineNumber,
-    required this.text,
-  });
-
-  final int lineNumber;
-  final String text;
-
-  @override
-  String toString() => '$lineNumber: $text';
 }

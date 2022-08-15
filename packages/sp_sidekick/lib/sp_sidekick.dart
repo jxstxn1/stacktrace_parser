@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:sidekick_core/sidekick_core.dart';
 import 'package:sp_sidekick/src/commands/deps_command.dart';
+import 'package:sp_sidekick/src/commands/gen_command.dart';
 import 'package:sp_sidekick/src/commands/recompile_command.dart';
 import 'package:sp_sidekick/src/sp_project.dart';
 
@@ -19,6 +20,7 @@ Future<void> runSp(List<String> args) async {
     ..addCommand(FlutterCommand())
     ..addCommand(DartCommand())
     ..addCommand(DepsCommand())
+    ..addCommand(GenerateCommand())
     ..addCommand(InstallGlobalCommand())
     ..addCommand(DartAnalyzeCommand());
 

@@ -1,21 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:stacktrace_parser/data/stacktrace_handler.dart';
+import 'package:go_router/go_router.dart';
 import 'package:stacktrace_parser/presentation/homescreen.dart';
 
-class StackTraceParser extends StatelessWidget {
+class StackTraceParser extends StatefulWidget {
   const StackTraceParser() : super();
 
   @override
+  State<StackTraceParser> createState() => _StackTraceParserState();
+}
+
+class _StackTraceParserState extends State<StackTraceParser> {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Consumer<StackTraceHandler>(
-        builder: (_, __, ___) => const HomeScreen(),
-      ),
+    return MaterialApp.router(
+      routeInformationProvider: _router.routeInformationProvider,
+      routeInformationParser: _router.routeInformationParser,
+      routerDelegate: _router.routerDelegate,
     );
   }
+
+  late final GoRouter _router = GoRouter(
+    debugLogDiagnostics: true,
+    routes: [
+      GoRoute(
+        path: '/',
+        name: '/',
+        builder: (_, state) {
+          final valueKey = ValueKey(state.queryParams['id'] ?? 'home');
+          return HomeScreen(key: valueKey, id: state.queryParams['id'] ?? 'home');
+        },
+      ),
+    ],
+  );
 }
