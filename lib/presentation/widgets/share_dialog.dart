@@ -11,6 +11,7 @@ class ShareDialog extends StatefulWidget {
 }
 
 class _ShareDialogState extends State<ShareDialog> {
+  bool shouldShowPasswordBox = false;
   final TextEditingController _passwordController = TextEditingController();
 
   @override
@@ -24,40 +25,58 @@ class _ShareDialogState extends State<ShareDialog> {
     return Builder(
       builder: (context) {
         return AlertDialog(
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text('Enter a password if you want to encrypt your stacktrace'),
-              const Gap(20),
-              TextFormField(
-                obscureText: true,
-                controller: _passwordController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Password',
+          content: Align(
+            heightFactor: 1,
+            alignment: Alignment.topLeft,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text('Enter a password if you want to encrypt your stacktrace'),
+                const Gap(20),
+                Row(
+                  children: <Widget>[
+                    Checkbox(
+                      value: shouldShowPasswordBox,
+                      onChanged: (enabled) => setState(() {
+                        shouldShowPasswordBox = enabled ?? false;
+                      }),
+                    ),
+                    const Gap(15),
+                    const Text('Add password'),
+                  ],
                 ),
-              ),
-            ],
-          ),
-          actions: [
-            TextButton(
-              onPressed: () async {
-                context.read<StacktraceBloc>().add(
-                      StacktraceEvent.shareStacktrace(
-                        _passwordController.value.text,
-                      ),
-                    );
-                context.read<GlobalKey<ScaffoldMessengerState>>().currentState?.showSnackBar(
-                      const SnackBar(
-                        content: Text('Stacktrace copied to clipboard'),
-                        backgroundColor: Colors.green,
-                      ),
-                    );
-                Navigator.of(context).pop();
-              },
-              child: const Text('Share'),
+                const Gap(5),
+                if (shouldShowPasswordBox)
+                  TextFormField(
+                    obscureText: true,
+                    controller: _passwordController,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Password',
+                    ),
+                  ),
+                const Gap(20),
+                OutlinedButton(
+                  onPressed: () async {
+                    context.read<StacktraceBloc>().add(
+                          StacktraceEvent.shareStacktrace(
+                            _passwordController.value.text,
+                          ),
+                        );
+                    context.read<GlobalKey<ScaffoldMessengerState>>().currentState?.showSnackBar(
+                          const SnackBar(
+                            content: Text('Stacktrace copied to clipboard'),
+                            backgroundColor: Colors.green,
+                          ),
+                        );
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('Share'),
+                ),
+              ],
             ),
-          ],
+          ),
         );
       },
     );
