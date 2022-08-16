@@ -1,4 +1,3 @@
-import 'package:cryptography/cryptography.dart';
 import 'package:stacktrace_parser/data/crypto/crypto_manager.dart';
 import 'package:stacktrace_parser/domain/stacktrace_models.dart';
 
@@ -11,14 +10,11 @@ class Crypto {
   /// [password] The password to encrypt with.
   Future<ParseResult> encryptParseResult(ParseResult result, String password) async {
     // Encrypting the raw StackTrace String.
-    final salt = await cryptoManager.generateSalt();
-    final SecretKey key = await cryptoManager.generateKey(salt, password);
-
-    final String encryptedRawStackTrace = await cryptoManager.encrypt(result.rawStackTrace, key, salt);
+    final String encryptedRawStackTrace = await cryptoManager.encrypt(result.rawStackTrace, password);
     // Encrypting the relevant Lines.
     final List<StackTraceLine> encryptedRelevantLines = [];
     for (final StackTraceLine line in result.relevantLines) {
-      final String encryptedLine = await cryptoManager.encrypt(line.text, key, salt);
+      final String encryptedLine = await cryptoManager.encrypt(line.text, password);
       encryptedRelevantLines.add(StackTraceLine(lineNumber: line.lineNumber, text: encryptedLine));
     }
     return ParseResult(relevantLines: encryptedRelevantLines, rawStackTrace: encryptedRawStackTrace);

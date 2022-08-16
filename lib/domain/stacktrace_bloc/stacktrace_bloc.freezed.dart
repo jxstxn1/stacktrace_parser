@@ -795,6 +795,7 @@ mixin _$StacktraceState {
   StacktraceResource get result => throw _privateConstructorUsedError;
   bool get isEncrypted => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
+  bool? get hasCreated => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
 
@@ -806,7 +807,8 @@ mixin _$StacktraceState {
 abstract class $StacktraceStateCopyWith<$Res> {
   factory $StacktraceStateCopyWith(StacktraceState value, $Res Function(StacktraceState) then) =
       _$StacktraceStateCopyWithImpl<$Res>;
-  $Res call({StacktraceResource result, bool isEncrypted, bool isLoading, String? id, String? password});
+  $Res call(
+      {StacktraceResource result, bool isEncrypted, bool isLoading, bool? hasCreated, String? id, String? password});
 
   $StacktraceResourceCopyWith<$Res> get result;
 }
@@ -824,6 +826,7 @@ class _$StacktraceStateCopyWithImpl<$Res> implements $StacktraceStateCopyWith<$R
     Object? result = freezed,
     Object? isEncrypted = freezed,
     Object? isLoading = freezed,
+    Object? hasCreated = freezed,
     Object? id = freezed,
     Object? password = freezed,
   }) {
@@ -840,6 +843,10 @@ class _$StacktraceStateCopyWithImpl<$Res> implements $StacktraceStateCopyWith<$R
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      hasCreated: hasCreated == freezed
+          ? _value.hasCreated
+          : hasCreated // ignore: cast_nullable_to_non_nullable
+              as bool?,
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -863,7 +870,8 @@ class _$StacktraceStateCopyWithImpl<$Res> implements $StacktraceStateCopyWith<$R
 abstract class _$$_StateCopyWith<$Res> implements $StacktraceStateCopyWith<$Res> {
   factory _$$_StateCopyWith(_$_State value, $Res Function(_$_State) then) = __$$_StateCopyWithImpl<$Res>;
   @override
-  $Res call({StacktraceResource result, bool isEncrypted, bool isLoading, String? id, String? password});
+  $Res call(
+      {StacktraceResource result, bool isEncrypted, bool isLoading, bool? hasCreated, String? id, String? password});
 
   @override
   $StacktraceResourceCopyWith<$Res> get result;
@@ -881,6 +889,7 @@ class __$$_StateCopyWithImpl<$Res> extends _$StacktraceStateCopyWithImpl<$Res> i
     Object? result = freezed,
     Object? isEncrypted = freezed,
     Object? isLoading = freezed,
+    Object? hasCreated = freezed,
     Object? id = freezed,
     Object? password = freezed,
   }) {
@@ -897,6 +906,10 @@ class __$$_StateCopyWithImpl<$Res> extends _$StacktraceStateCopyWithImpl<$Res> i
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      hasCreated: hasCreated == freezed
+          ? _value.hasCreated
+          : hasCreated // ignore: cast_nullable_to_non_nullable
+              as bool?,
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -912,7 +925,13 @@ class __$$_StateCopyWithImpl<$Res> extends _$StacktraceStateCopyWithImpl<$Res> i
 /// @nodoc
 
 class _$_State implements _State {
-  const _$_State({required this.result, required this.isEncrypted, required this.isLoading, this.id, this.password});
+  const _$_State(
+      {required this.result,
+      required this.isEncrypted,
+      required this.isLoading,
+      this.hasCreated,
+      this.id,
+      this.password});
 
   @override
   final StacktraceResource result;
@@ -921,13 +940,15 @@ class _$_State implements _State {
   @override
   final bool isLoading;
   @override
+  final bool? hasCreated;
+  @override
   final String? id;
   @override
   final String? password;
 
   @override
   String toString() {
-    return 'StacktraceState(result: $result, isEncrypted: $isEncrypted, isLoading: $isLoading, id: $id, password: $password)';
+    return 'StacktraceState(result: $result, isEncrypted: $isEncrypted, isLoading: $isLoading, hasCreated: $hasCreated, id: $id, password: $password)';
   }
 
   @override
@@ -938,6 +959,7 @@ class _$_State implements _State {
             const DeepCollectionEquality().equals(other.result, result) &&
             const DeepCollectionEquality().equals(other.isEncrypted, isEncrypted) &&
             const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality().equals(other.hasCreated, hasCreated) &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.password, password));
   }
@@ -948,6 +970,7 @@ class _$_State implements _State {
       const DeepCollectionEquality().hash(result),
       const DeepCollectionEquality().hash(isEncrypted),
       const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(hasCreated),
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(password));
 
@@ -961,6 +984,7 @@ abstract class _State implements StacktraceState {
       {required final StacktraceResource result,
       required final bool isEncrypted,
       required final bool isLoading,
+      final bool? hasCreated,
       final String? id,
       final String? password}) = _$_State;
 
@@ -970,6 +994,8 @@ abstract class _State implements StacktraceState {
   bool get isEncrypted;
   @override
   bool get isLoading;
+  @override
+  bool? get hasCreated;
   @override
   String? get id;
   @override

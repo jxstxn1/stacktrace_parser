@@ -153,7 +153,9 @@ class _HomescreenContentState extends State<HomescreenContent> {
                                 },
                                 child: const Text('Share'),
                               ),
-                            ] else if (state.result.data != null && !(state.id == null)) ...[
+                            ] else if (state.result.data != null &&
+                                state.id != null &&
+                                !(state.hasCreated ?? false)) ...[
                               const Gap(20),
                               ElevatedButton(
                                 onPressed: () {
@@ -162,6 +164,19 @@ class _HomescreenContentState extends State<HomescreenContent> {
                                 },
                                 child: const Text('Parse your own Stacktrace'),
                               ),
+                            ],
+                            if ((state.hasCreated ?? false) && state.id != null) ...[
+                              const Gap(20),
+                              const Text(
+                                'You can copy the link below to share your Stacktrace with a CoWorker',
+                                textAlign: TextAlign.start,
+                                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                              ),
+                              const Gap(5),
+                              SelectableText(
+                                'https://stacktrace-parser.web.app/?id=${state.id}',
+                                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                              )
                             ],
                           ],
                         ),

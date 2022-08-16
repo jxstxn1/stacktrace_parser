@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:stacktrace_parser/data/database/database.dart';
 import 'package:stacktrace_parser/domain/stacktrace_models.dart';
 
@@ -21,7 +20,6 @@ class FirestoreHandler implements Database {
 
   @override
   Future<DatabaseParseResult> getStackTrace(String id) async {
-    debugPrint('test');
     return _firestore.collection('stacktraces').doc(id).get().then((DocumentSnapshot value) {
       if (!value.exists) throw StackTraceDoesntExistExeption;
       return DatabaseParseResult.fromJson(value.data() as Map<String, dynamic>? ?? {});

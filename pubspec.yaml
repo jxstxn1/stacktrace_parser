@@ -10,6 +10,7 @@ environment:
 dependencies:
   bloc: ^8.1.0
   cloud_firestore: ^3.4.4
+  convert: ^3.0.2
   cryptography: ^2.0.5
   dartx: ^1.1.0
   

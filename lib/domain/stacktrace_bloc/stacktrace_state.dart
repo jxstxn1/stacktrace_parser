@@ -6,6 +6,7 @@ class StacktraceState with _$StacktraceState {
     required StacktraceResource result,
     required bool isEncrypted,
     required bool isLoading,
+    bool? hasCreated,
     String? id,
     String? password,
   }) = _State;

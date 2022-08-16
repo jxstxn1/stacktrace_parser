@@ -12,17 +12,11 @@ void main() {
     final Crypto crypto = Crypto();
     const String password = 'password';
     final stacktrace = File('test/resources/stacktrace1.txt').readAsStringSync();
-    final file = File('test/resources/encrypted.txt');
     final result = parseStackTrace(stacktrace);
     final ParseResult encryptedResult = await crypto.encryptParseResult(result, password);
-    file.writeAsStringSync(encryptedResult.rawStackTrace);
-    file.writeAsStringSync(
-      mode: FileMode.append,
-      encryptedResult.relevantLines.map((line) => '${line.lineNumber}: ${line.text}').join('\n'),
-    );
     final ParseResult decryptedResult = await crypto.decryptParseResult(encryptedResult, password);
     expect(decryptedResult.rawStackTrace, result.rawStackTrace);
     expect(decryptedResult.relevantLines, result.relevantLines);
-    debugPrint('doSomething() executed in ${stopwatch.elapsed}');
+    debugPrint('Encryption and decryption executed in ${stopwatch.elapsed}');
   });
 }

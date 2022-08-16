@@ -14,9 +14,7 @@ class StacktraceBloc extends Bloc<StacktraceEvent, StacktraceState> {
   Database database;
   Crypto crypto;
   ParseResult? _result;
-  bool? isEncrypted;
   String? id;
-  String? password;
 
   StacktraceBloc({
     required this.database,
@@ -24,9 +22,7 @@ class StacktraceBloc extends Bloc<StacktraceEvent, StacktraceState> {
   }) : super(StacktraceState.initial) {
     on<_Reset>((_, emit) {
       _result = null;
-      isEncrypted = null;
       id = null;
-      password = null;
       emit(StacktraceState.initial);
     });
     on<_LoadStack>((event, emit) async {
@@ -92,7 +88,14 @@ class StacktraceBloc extends Bloc<StacktraceEvent, StacktraceState> {
 
     on<_ParseStack>((event, emit) async {
       _result = parseStackTrace(event.stacktrace);
-      emit(state.copyWith(result: StacktraceResource(data: _result)));
+      emit(
+        state.copyWith(
+          result: StacktraceResource(
+            data: _result,
+          ),
+          hasCreated: true,
+        ),
+      );
     });
 
     on<_ShareStack>((event, emit) async {
