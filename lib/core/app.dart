@@ -19,7 +19,7 @@ class _StackTraceParserState extends State<StackTraceParser> {
       secret: 'HWVKZqwxzySdEaJ-5fAwd_LVUEeJwD-W',
       projectId: 'stacktraceparser-i6samxc',
       theme: WiredashThemeData.fromColor(
-        primaryColor: const Color(0xFF29222E),
+        primaryColor: const Color.fromARGB(255, 132, 39, 198),
         brightness: Brightness.dark,
       ),
       feedbackOptions: const WiredashFeedbackOptions(
