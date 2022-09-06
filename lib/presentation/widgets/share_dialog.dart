@@ -71,28 +71,6 @@ class _ShareDialogState extends State<ShareDialog> {
                     style: const TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
                     cursorColor: const Color(0xFFE126B8),
                     decoration: const InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0xFFE5D6F1),
-                        ),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0xFFE5D6F1),
-                        ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0xFFE5D6F1),
-                        ),
-                      ),
-                      hintStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
-                      helperStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
-                      labelStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
-                      prefixStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
-                      suffixStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
-                      floatingLabelStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
-                      counterStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
                       hintText: 'Password',
                     ),
                   ),

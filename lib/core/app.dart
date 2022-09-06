@@ -46,6 +46,30 @@ class _StackTraceParserState extends State<StackTraceParser> {
               ),
             ),
           ),
+          inputDecorationTheme: const InputDecorationTheme(
+            border: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color(0xFFE5D6F1),
+              ),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color(0xFFE5D6F1),
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Color(0xFFE5D6F1),
+              ),
+            ),
+            hintStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+            helperStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+            labelStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+            prefixStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+            suffixStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+            floatingLabelStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+            counterStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+          ),
         ),
         scaffoldMessengerKey: context.read<GlobalKey<ScaffoldMessengerState>>(),
         routeInformationProvider: _router.routeInformationProvider,
