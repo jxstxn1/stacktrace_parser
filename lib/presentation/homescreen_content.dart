@@ -69,57 +69,62 @@ class _HomescreenContentState extends State<HomescreenContent> {
                                     Expanded(
                                       child: StacktraceInput(stacktraceController: _stacktraceController),
                                     ),
-                                    if (state.result.data == null) ...[
-                                      const Gap(20),
-                                      ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          fixedSize: const Size(85, 38),
-                                        ),
-                                        onPressed: () {
-                                          final text = _stacktraceController.value.text
-                                            ..replaceAll(' ', '')
-                                            ..replaceAll('\n', '');
-                                          if (text.isEmpty) return;
-                                          context.read<StacktraceBloc>().add(
-                                                StacktraceEvent.parseStacktrace(
-                                                  _stacktraceController.value.text,
-                                                ),
-                                              );
-                                        },
-                                        child: const Text(
-                                          'PARSE',
-                                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
-                                    ],
                                     const Gap(20),
-                                    if (state.result.data != null && state.result.data!.relevantLines.isNotEmpty)
-                                      ...state.result.data!.relevantLines.map(
-                                        (line) => Text(
-                                          '${line.lineNumber}: ${line.text}',
+                                    if (state.result.data != null) ...[
+                                      if (state.result.data!.relevantLines.isNotEmpty)
+                                        const Text(
+                                          'Look what I found in your stacktrace, I would definitely check out those lines:',
                                           textAlign: TextAlign.start,
-                                          style: const TextStyle(
-                                            fontSize: 14,
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
                                             color: Color(0xFFE5D6F1),
                                           ),
                                         ),
+                                      if (state.result.data!.relevantLines.isEmpty)
+                                        const Text(
+                                          "Unfortuanately I couldn't find anything useful in your stacktrace, but you can still share it with your friends.\nIf you think I'm wrong, please Send Feedback via the Feedback button in the bottom.",
+                                          textAlign: TextAlign.start,
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color(0xFFE5D6F1),
+                                          ),
+                                        ),
+                                      const Gap(30),
+                                      SizedBox(
+                                        height: height / 3,
+                                        child: SingleChildScrollView(
+                                          primary: false,
+                                          child: Column(
+                                            children: <Widget>[
+                                              ...state.result.data!.relevantLines.map(
+                                                (line) => Text(
+                                                  '${line.lineNumber}: ${line.text}',
+                                                  textAlign: TextAlign.start,
+                                                  style: const TextStyle(
+                                                    fontSize: 14,
+                                                    color: Color(0xFFE5D6F1),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
                                       ),
-                                    if (state.result.data != null &&
-                                        state.result.data!.relevantLines.isNotEmpty &&
-                                        (state.id == null)) ...[
-                                      const Gap(20),
-                                      const SharePromptSection(),
-                                    ] else if (state.result.data != null &&
-                                        state.id != null &&
-                                        !(state.hasCreated ?? false)) ...[
-                                      const Gap(20),
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          context.read<StacktraceBloc>().add(const StacktraceEvent.reset());
-                                          context.go('/');
-                                        },
-                                        child: const Text('Parse your own Stacktrace'),
-                                      ),
+                                      if (state.result.data!.relevantLines.isNotEmpty && (state.id == null)) ...[
+                                        const Gap(20),
+                                        const SharePromptSection(),
+                                      ] else if (state.id != null && !(state.hasCreated ?? false)) ...[
+                                        const Gap(20),
+                                        ElevatedButton(
+                                          onPressed: () {
+                                            context.read<StacktraceBloc>().add(const StacktraceEvent.reset());
+                                            context.go('/');
+                                          },
+                                          child: const Text('Parse your own Stacktrace'),
+                                        ),
+                                      ],
                                     ],
                                     if ((state.hasCreated ?? false) && state.id != null) ...[
                                       ShareLinkSection(state: state),
