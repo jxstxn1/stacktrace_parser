@@ -99,7 +99,7 @@ class _HomescreenContentState extends State<HomescreenContent> {
                                           child: Column(
                                             children: <Widget>[
                                               ...state.result.data!.relevantLines.map(
-                                                (line) => Text(
+                                                (line) => SelectableText(
                                                   '${line.lineNumber}: ${line.text}',
                                                   textAlign: TextAlign.start,
                                                   style: const TextStyle(
