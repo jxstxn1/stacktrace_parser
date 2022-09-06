@@ -98,14 +98,16 @@ class _HomescreenContentState extends State<HomescreenContent> {
                                           primary: false,
                                           child: Column(
                                             children: <Widget>[
-                                              ...state.result.data!.relevantLines.map(
-                                                (line) => SelectableText(
-                                                  '${line.lineNumber}: ${line.text}',
-                                                  textAlign: TextAlign.start,
-                                                  style: const TextStyle(
-                                                    fontSize: 14,
-                                                    color: Color(0xFFE5D6F1),
-                                                  ),
+                                              SelectableText(
+                                                state.result.data!.relevantLines
+                                                    .map(
+                                                      (line) => '${line.lineNumber}: ${line.text}',
+                                                    )
+                                                    .join('\n'),
+                                                textAlign: TextAlign.start,
+                                                style: const TextStyle(
+                                                  fontSize: 14,
+                                                  color: Color(0xFFE5D6F1),
                                                 ),
                                               ),
                                             ],
