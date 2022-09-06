@@ -25,6 +25,7 @@ class _ShareDialogState extends State<ShareDialog> {
     return Builder(
       builder: (context) {
         return AlertDialog(
+          backgroundColor: const Color(0xFF29222E),
           content: Align(
             heightFactor: 1,
             alignment: Alignment.topLeft,
@@ -32,18 +33,34 @@ class _ShareDialogState extends State<ShareDialog> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text('Enter a password if you want to encrypt your stacktrace'),
+                const Text(
+                  'Enter a password if you want to encrypt your stacktrace',
+                  style: TextStyle(
+                    color: Color(0xFFE5D6F1),
+                  ),
+                ),
                 const Gap(20),
                 Row(
                   children: <Widget>[
                     Checkbox(
+                      side: MaterialStateBorderSide.resolveWith(
+                        (states) => const BorderSide(
+                          color: Color(0xFFE5D6F1),
+                        ),
+                      ),
+                      activeColor: const Color(0xFFE126B8),
                       value: shouldShowPasswordBox,
                       onChanged: (enabled) => setState(() {
                         shouldShowPasswordBox = enabled ?? false;
                       }),
                     ),
                     const Gap(15),
-                    const Text('Add password'),
+                    const Text(
+                      'Add password',
+                      style: TextStyle(
+                        color: Color(0xFFE5D6F1),
+                      ),
+                    ),
                   ],
                 ),
                 const Gap(5),
@@ -51,8 +68,31 @@ class _ShareDialogState extends State<ShareDialog> {
                   TextFormField(
                     obscureText: true,
                     controller: _passwordController,
+                    style: const TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+                    cursorColor: const Color(0xFFE126B8),
                     decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xFFE5D6F1),
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xFFE5D6F1),
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0xFFE5D6F1),
+                        ),
+                      ),
+                      hintStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+                      helperStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+                      labelStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+                      prefixStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+                      suffixStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+                      floatingLabelStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
+                      counterStyle: TextStyle(fontSize: 14, color: Color(0xFFE5D6F1)),
                       hintText: 'Password',
                     ),
                   ),

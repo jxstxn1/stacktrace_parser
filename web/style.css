@@ -1,0 +1,26 @@
+.center {
+  margin: 0;
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  background-color: #29222f;
+  display: flex;
+}
+
+.logo {
+  height: 240px;
+  width: 240px;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}

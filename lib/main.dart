@@ -21,7 +21,9 @@ Future<void> main() async {
         Provider<Database>(
           create: (_) => FirestoreHandler(),
         ),
-        Provider<Crypto>(create: (_) => Crypto()),
+        Provider<Crypto>(
+          create: (_) => Crypto(),
+        ),
       ],
       child: const StackTraceParser(),
     ),

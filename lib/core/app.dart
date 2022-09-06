@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+import 'package:stacktrace_parser/gen/fonts.gen.dart';
 import 'package:stacktrace_parser/presentation/homescreen.dart';
 import 'package:wiredash/wiredash.dart';
 
@@ -17,6 +18,10 @@ class _StackTraceParserState extends State<StackTraceParser> {
     return Wiredash(
       secret: 'HWVKZqwxzySdEaJ-5fAwd_LVUEeJwD-W',
       projectId: 'stacktraceparser-i6samxc',
+      theme: WiredashThemeData.fromColor(
+        primaryColor: const Color(0xFF29222E),
+        brightness: Brightness.dark,
+      ),
       feedbackOptions: const WiredashFeedbackOptions(
         labels: [
           Label(id: 'label-x6obw1fa73', title: 'Bug'),
@@ -24,6 +29,24 @@ class _StackTraceParserState extends State<StackTraceParser> {
         ],
       ),
       child: MaterialApp.router(
+        theme: ThemeData(
+          backgroundColor: const Color(0xFF29222E),
+          scaffoldBackgroundColor: const Color(0xFF29222E),
+          fontFamily: FontFamily.spaceMono,
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFE126B8),
+            ),
+          ),
+          outlinedButtonTheme: OutlinedButtonThemeData(
+            style: OutlinedButton.styleFrom(
+              foregroundColor: const Color(0xFF68E5DE),
+              side: const BorderSide(
+                color: Color(0xFF68E5DE),
+              ),
+            ),
+          ),
+        ),
         scaffoldMessengerKey: context.read<GlobalKey<ScaffoldMessengerState>>(),
         routeInformationProvider: _router.routeInformationProvider,
         routeInformationParser: _router.routeInformationParser,
